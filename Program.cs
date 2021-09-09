@@ -8,7 +8,7 @@ namespace UniqueRandomNumbers
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Unique Random Generator <1-10000>");
+            Console.Write("Unique Random Generator <1-10000>:");
             Random rand = new Random();
             List<int> numbers = new List<int>();
             for (int i = 0; i < 100; ++i)
