@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Collections.Generic;
 
 namespace UniqueRandomNumbers
@@ -7,19 +8,21 @@ namespace UniqueRandomNumbers
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Unique  Random Generator <1-10000>");
+            Console.WriteLine("Unique Random Generator <1-10000>");
             Random rand = new Random();
             List<int> numbers = new List<int>();
-                numbers.Add(rand.Next(1,101));
+            for (int i = 0; i < 100; ++i)
+                numbers.Add(rand.Next(1, 101));
+                
                 Display(numbers);
-                //Console.ReadKey();
+                //Console.Read();
                 //Console.Write(numbers);
         }
-
-        static void Display(List<int> list)
+                 
+        static void Display(List<int> list)             //Display method shows 50 number in each raw
         {
             for(int i = 0; i < list.Count; ++i)
-                if (i % 25 == 0)
+                if (i % 50 == 0)
                    Console.WriteLine();
                 else
                    Console.Write(list[i] + " ");
