@@ -5,7 +5,7 @@ namespace UniqueRandomNumbers
 {
     class Program
     {
-        static void Main(string[] args)                                     // Main Method to generate unique random numbers
+        static void Main(string[] args)                                     // Main method to generate unique random numbers
         {   
             Console.WriteLine("Unique Random Number Generator < 1 - 10000 >:");
             Random rand = new Random();
@@ -35,17 +35,17 @@ namespace UniqueRandomNumbers
             Display(numbers);
         }
                  
-        static void Display(List<int> list)             //Display method shows 25 number in each row in the form of a list.
+        static void Display(List<int> list)             //Display method shows 25 number in each row in the form of a list
         {   
             for(int i = 0; i < list.Count; i++)
                 if(i == 0)
-                   Console.Write("[ "+ list[i] + ", ");
+                   Console.Write("[ " + list[i] + ", ");
       
-                else if((i+1) % 25 == 0 && i != (list.Count)-1)
+                else if((i+1) % 25 == 0 && i != (list.Count) - 1)
                    Console.WriteLine(list[i] + ", ");
                 
                 else if (i == (list.Count)-1)
-                   Console.Write(list[i] +" ]");
+                   Console.Write(list[i] + " ]");
                    
                 else 
                    Console.Write(list[i] + ", ");
